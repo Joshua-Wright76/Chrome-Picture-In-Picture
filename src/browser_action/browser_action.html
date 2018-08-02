@@ -13,6 +13,11 @@
 		font-size: 2em;
 	}
 
+	input {
+		width: 360px;
+		border: 5px solid black;
+	}
+
 	#settingsTitle {
 		display: flex;
 		flex-direction: row;
@@ -24,11 +29,23 @@
 		width: 75px;
 		height: 50px;
 		display: block;
-		margin-top: 70px;
+		margin-top: 20px;
+		background-color: white;
+		border-style: none;
 	}
-	#settingsButtonRow{
+	#settingsButtonRow {
 		width: 200%;
 		display: block;
+	}
+
+	#lowerLeftIconImage {
+		margin-left: -10px;
+	}
+
+	#lowerLeftButton {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
 	}
 
 	.settingsButtonEntry {
@@ -50,26 +67,30 @@
 			</td>
 		</tr>
 		<tr class="URLsetting">
-			<td>
-				
+			<td style="display: flex; flex-direction: row; justify-content: space-around">
+				<input type="text">
 			</td>
 		</tr>
 		<tr class="settingsButtonRow">
 			<td id="settingsButtonEntry" style="display: flex; flex-direction: row; justify-content: space-around">
-				<button>
-				
+				<button class = "lowerLeftButton">
+					<img src="https://i.imgur.com/BF2OEuB.png" class="lowerLeftIconImage"
+						style="margin-left: -8px; width: 75px; margin-top: -3px;">
 				</button>
 	
 				<button>
-
+					<img src="https://i.imgur.com/BF2OEuB.png" class="upperLeftIconImage"
+						style="margin-left: -8px; width: 75px; margin-top: -3px; transform: scaleY(-1)">
 				</button>
 
 				<button>
-
+					<img src="https://i.imgur.com/5GitVde.png" class="upperRightIconImage"
+						style="margin-left: -8px; width: 75px; margin-top: -3px; transform: scaleY(-1)">
 				</button>
 
 				<button>
-
+					<img src="https://i.imgur.com/5GitVde.png" class="lowerRightIconImage"
+						style="margin-left: -8px; width: 75px; margin-top: -3px;">
 				</button>
 			</td>
 		</tr>
