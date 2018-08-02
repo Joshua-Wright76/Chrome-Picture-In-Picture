@@ -8,13 +8,10 @@ chrome.extension.sendMessage({}, function(response) {
 		 console.log("Hello. This message was sent from scripts/inject.js");
 		// ----------------------------------------------------------
 
-		let script = $("<script>window.onYouTubeIframeAPIReady = () => { console.log('RUNNING!!!!!!!!!'); player = new YT.Player('player', {height: '390',width: '640',videoId: 'M7lc1UVf-VE',events: {'onReady': onPlayerReady,'onStateChange': onPlayerStateChange}});} </script>")
-		$('body').append(script);
-
-		let video = $("<div id='videoPlayer'><iframe width='640' height='360'src='https://www.youtube.com/embed/jofNR_WkoCE?rel=0&autoplay=true' frameborder='0' allowfullscreen></iframe></div>");
+		let video = $("<div id='videoPlayer'><iframe style='padding-top: 15px;' width='640' height='360'src='https://www.youtube.com/embed/jI-kpVh6e1U?rel=0&autoplay=true' frameborder='0' allowfullscreen></iframe></div>");
 		video.css({'position' : 'fixed', 'bottom' : '0', 'right' : '0', 'z-index' : '1000000'});
-	//	video.draggable({iframeFix: true});
 		$('body').append(video);
+		$("#videoPlayer").draggable();
 
 		var tag = $(``);
 		$('body').append(tag);

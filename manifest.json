@@ -37,6 +37,7 @@
       ],
       "js": [
         "js/jquery/jquery.js",
+        "js/jquery/jquery-ui.js",
         "src/inject/inject.js"
       ]
     }
