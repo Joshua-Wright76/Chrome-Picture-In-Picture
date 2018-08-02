@@ -5,19 +5,19 @@ chrome.runtime.onMessage.addListener(
     console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
-    if (request.greeting[0][0] == "-"){
-			if(request.greeting[0] == "-topLeft"){
+    if (request.greeting[0] == "-"){
+			if(request.greeting == "-topLeft"){
 				updateCorner("0", "auto", "0", "auto");
-			} else if (request.greeting[0] == "-topRight"){
+			} else if (request.greeting == "-topRight"){
 				updateCorner("0", "auto", "auto", "0");
-			} else if (request.greeting[0] == "-botLeft"){
+			} else if (request.greeting == "-botLeft"){
 				updateCorner("auto", "0", "0", "auto");
-			} else if (request.greeting[0] == "-botRight"){
+			} else if (request.greeting == "-botRight"){
 				updateCorner("auto", "0", "auto", "0");
 			}
 		} else {
-			console.log(`Loading Video ${request.greeting[0]}`);
-			loadVideoPlayer(request.greeting[0]);
+			console.log(`Loading Video ${request.greeting}`);
+			loadVideoPlayer(request.greeting);
 		}
   });
 
