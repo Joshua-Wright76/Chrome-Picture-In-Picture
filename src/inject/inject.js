@@ -13,7 +13,7 @@ chrome.extension.sendMessage({}, function(response) {
 
 		let video = $("<div id='videoPlayer'><iframe width='640' height='360'src='https://www.youtube.com/embed/jofNR_WkoCE?rel=0&autoplay=true' frameborder='0' allowfullscreen></iframe></div>");
 		video.css({'position' : 'fixed', 'bottom' : '0', 'right' : '0', 'z-index' : '1000000'});
-		video.draggable({iframeFix: true});
+	//	video.draggable({iframeFix: true});
 		$('body').append(video);
 
 		var tag = $(``);
