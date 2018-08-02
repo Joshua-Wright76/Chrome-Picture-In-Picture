@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener(
     console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
-    if (request.greeting[0] == "-"){
+    if (request.greeting[0][0] == "-"){
 			if(request.greeting[0] == "-topLeft"){
 				updateCorner("0", "auto", "0", "auto");
 			} else if (request.greeting[0] == "-topRight"){
@@ -16,6 +16,7 @@ chrome.runtime.onMessage.addListener(
 				updateCorner("auto", "0", "auto", "0");
 			}
 		} else {
+			console.log(`Loading Video ${request.greeting[0]}`);
 			loadVideoPlayer(request.greeting[0]);
 		}
   });
