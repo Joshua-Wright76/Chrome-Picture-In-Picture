@@ -1,6 +1,9 @@
 <!doctype html>
 <style type="text/css">
 	#mainPopup {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		padding: 10px;
 		height: 200px;
 		width: 400px;
@@ -9,9 +12,67 @@
 	h1 {
 		font-size: 2em;
 	}
+
+	#settingsTitle {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	
+	button {
+		width: 75px;
+		height: 50px;
+		display: block;
+		margin-top: 70px;
+	}
+	#settingsButtonRow{
+		width: 200%;
+		display: block;
+	}
+
+	.settingsButtonEntry {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
 </style>
 
-<div id="mainPopup">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/browser_action/browser_action.html. The CSS is there, too.</p>
+<div id="mainPopup" class = "mainPopup">
+
+	<table class = "settingsTable">
+		<tr class = "settingsTitle">
+			<td style="display: flex; flex-direction: row; justify-content: space-around">
+				<h1>
+					Chrome PiP
+				</h1>
+			</td>
+		</tr>
+		<tr class="URLsetting">
+			<td>
+				
+			</td>
+		</tr>
+		<tr class="settingsButtonRow">
+			<td id="settingsButtonEntry" style="display: flex; flex-direction: row; justify-content: space-around">
+				<button>
+				
+				</button>
+	
+				<button>
+
+				</button>
+
+				<button>
+
+				</button>
+
+				<button>
+
+				</button>
+			</td>
+		</tr>
+	</table>
+
 </div>
